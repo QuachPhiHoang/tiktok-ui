@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: var(--defautl-layout-header-width, 1150px);
+    min-height: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1;
+    background-color: green;
+    min-height: 1000px;
+    text-align: center;
+}
