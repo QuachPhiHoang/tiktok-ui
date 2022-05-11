@@ -6,7 +6,9 @@ import {
     faSpinner,
     faMagnifyingGlass,
     faEllipsisVertical,
-    faSignIn,
+    faEarthAsia,
+    faCircleQuestion,
+    faKeyboard,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
@@ -15,6 +17,7 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
+import Menu from '~/components/Popper/Menu';
 
 const cx = classNames.bind(styles);
 
@@ -25,6 +28,22 @@ function Header() {
             setSearchResult([]);
         }, 0);
     });
+
+    const MENU_ITEMS = [
+        {
+            title: 'English',
+            icon: <FontAwesomeIcon icon={faEarthAsia} />,
+        },
+        {
+            title: 'Feedback and Help',
+            icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+            to: '/feedback',
+        },
+        {
+            title: 'Keyboard shortcuts',
+            icon: <FontAwesomeIcon icon={faKeyboard} />,
+        },
+    ];
 
     return (
         <header className={cx('wrapper')}>
@@ -67,9 +86,11 @@ function Header() {
                     <Button text>Upload</Button>
                     <Button primary>Log in</Button>
 
-                    {/* <div className={cx('setting')}>
-                        <FontAwesomeIcon icon={faEllipsisVertical} />
-                    </div> */}
+                    <Menu items={MENU_ITEMS}>
+                        <button className={cx('more-btn')}>
+                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                        </button>
+                    </Menu>
                 </div>
             </div>
         </header>

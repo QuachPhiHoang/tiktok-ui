@@ -3,8 +3,8 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-function Wrapper({ children }) {
-    return <div className={cx('wrapper')}>{children}</div>;
+function Wrapper({ children, classNames }) {
+    return <div className={cx('wrapper', 'menu-poper')}>{children}</div>;
 }
 
 export default Wrapper;
