@@ -20,6 +20,8 @@
 .logo {
 }
 
+//Search
+
 .search,
 .search-results {
     width: 361px;
@@ -71,7 +73,9 @@
 }
 
 .search-btn {
-    // position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: var(--search-bottom-width);
     height: 100%;
     border-bottom-right-radius: var(--search-border-radius);
@@ -100,7 +104,14 @@
     }
 }
 
+//Action
+
 .action {
+    display: flex;
+    align-items: center;
+}
+
+.current-user {
     display: flex;
     align-items: center;
 }
@@ -118,6 +129,7 @@
     font-size: 2.2rem;
     padding: 4px 12px;
     cursor: pointer;
+    position: relative;
 }
 
 .user-avatar {
@@ -127,4 +139,24 @@
     object-fit: cover;
     margin-left: 12px;
     cursor: pointer;
+}
+
+//infoIcons
+
+.inbox-info {
+    position: absolute;
+    content: '';
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2rem;
+    display: flex;
+    height: 18px;
+    right: 0;
+    top: 4px;
+    transform: translateY(-50%);
+    font-family: 'ProximaNova', sans-serif;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 0 6px;
 }

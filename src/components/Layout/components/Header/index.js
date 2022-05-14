@@ -4,12 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
     faSpinner,
-    faMagnifyingGlass,
     faEllipsisVertical,
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
     faGear,
     faArrowRightFromBracket,
     faCoins,
@@ -25,6 +23,8 @@ import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { InboxIcon, MessageIcon, SearchIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -132,7 +132,7 @@ function Header() {
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
 
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon className={cx('search-btn-icon')} icon={faMagnifyingGlass} />
+                            <SearchIcon className={cx('search-btn-icon')} />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -140,9 +140,20 @@ function Header() {
                     {currentUser ? (
                         <>
                             <div className={cx('current-user')}>
-                                <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
+                                <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
                                     <button className={cx('action-btn')}>
-                                        <FontAwesomeIcon icon={faCloudUpload} />
+                                        <UploadIcon />
+                                    </button>
+                                </Tippy>
+                                <Tippy delay={[0, 50]} content="Message" placement="bottom">
+                                    <button className={cx('action-btn')}>
+                                        <MessageIcon />
+                                    </button>
+                                </Tippy>
+                                <Tippy delay={[0, 50]} content="Inbox" placement="bottom">
+                                    <button className={cx('action-btn')}>
+                                        <InboxIcon />
+                                        <span className={cx('inbox-info')}>19</span>
                                     </button>
                                 </Tippy>
                             </div>
@@ -155,7 +166,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/38cadbe1e0a54cc0bdb8530d2f2c8978~c5_100x100.jpeg?x-expires=1652673600&x-signature=qb279MR1aOaegWAM9sp%2BWalx8fk%3D"
                                 alt="Nguyen van a"
