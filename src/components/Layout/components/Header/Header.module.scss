@@ -10,7 +10,7 @@
 }
 
 .inner {
-    padding: 24px;
+    padding: 0 24px;
     width: var(--defautl-layout-header-width, 1150px);
     height: 100%;
     display: flex;
@@ -18,90 +18,6 @@
     align-items: center;
 }
 .logo {
-}
-
-//Search
-
-.search,
-.search-results {
-    width: 361px;
-}
-
-.search {
-    height: var(--search-height);
-    padding-left: 16px;
-    align-items: center;
-    background-color: rgba(22, 24, 35, 0.06);
-    border-radius: var(--search-border-radius);
-    display: flex;
-    border: 1.5px solid transparent;
-    position: relative;
-    input {
-        flex: 1;
-        height: 100%;
-        color: var(--black);
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        background-color: transparent;
-        caret-color: red;
-    }
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(22, 24, 35, 0.75);
-    }
-
-    &:focus-within {
-        border-color: rgba(22, 24, 35, 0.2);
-    }
-}
-
-.search-title {
-    color: rgba(22, 24, 35, 0.5);
-    padding: 5px 12px;
-    font-weight: 600px;
-    font-size: 1.4rem;
-}
-
-.loading,
-.clear {
-    font-size: 1.6rem;
-    color: rgba(22, 24, 35, 0.34);
-    position: absolute;
-    right: calc(var(--search-bottom-width) + 16px);
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.search-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--search-bottom-width);
-    height: 100%;
-    border-bottom-right-radius: var(--search-border-radius);
-    border-top-right-radius: var(--search-border-radius);
-    outline: none;
-    border: none;
-    opacity: 1;
-    font-size: 1.8rem;
-    color: #a6a7ab;
-    position: relative;
-    &:hover {
-        cursor: pointer;
-        background-color: rgba(22, 24, 35, 0.03);
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
-        background-color: #a6a7ab;
-        width: 1px;
-        top: var(--search-top-spacer);
-        right: var(--search-bottom-width);
-    }
-    &:active {
-        background-color: rgba(22, 24, 35, 0.06);
-    }
 }
 
 //Action
@@ -152,8 +68,8 @@
     line-height: 2rem;
     display: flex;
     height: 18px;
-    right: 0;
-    top: 4px;
+    right: 4px;
+    top: 6px;
     transform: translateY(-50%);
     font-family: 'ProximaNova', sans-serif;
     color: var(--white);
