@@ -10,6 +10,9 @@
 
     --default-layout-header-height: 60px;
     --default-layout-header-width: 1150px;
+
+    //FontFamily
+    --font-family: 'ProximaNova', sans-serif;
 }
 
 * {
@@ -23,7 +26,7 @@ html {
 }
 
 body {
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     list-style: 1.5;
     text-rendering: optimizeSpeed;
