@@ -38,7 +38,7 @@ function Header() {
             title: 'English',
             icon: <FontAwesomeIcon icon={faEarthAsia} />,
             children: {
-                title: 'language',
+                title: 'Language',
                 data: [
                     {
                         type: 'language',
