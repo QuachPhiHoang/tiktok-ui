@@ -69,6 +69,7 @@
 .outline {
     border: 1px solid var(--currentColor);
     cursor: pointer;
+    color: var(--primary);
 
     &:hover {
         border-color: var(--primary);
